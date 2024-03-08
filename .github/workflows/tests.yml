@@ -7,6 +7,7 @@ on:
   push:
     branches:
       - main
+      - master
       - beta
       - stable
     paths-ignore:
@@ -23,7 +24,7 @@ jobs:
   build:
     if: github.event_name == 'pull_request' || github.repository != 'discourse/discourse-private-mirror'
     name: ${{ matrix.target }} ${{ matrix.build_type }} # Update fetch-job-id step if changing this
-    runs-on: ${{ (matrix.build_type == 'annotations') && 'ubuntu-latest' || 'ubuntu-20.04-8core' }}
+    runs-on: ubuntu-latest
     container: discourse/discourse_test:slim${{ (matrix.build_type == 'frontend' || matrix.build_type == 'system') && '-browsers' || '' }}${{ (matrix.ruby == '3.1') && '-ruby-3.1.0' || '' }}
     timeout-minutes: 20
 
@@ -67,8 +68,8 @@ jobs:
 
       - name: Setup Git
         run: |
-          git config --global user.email "ci@ci.invalid"
-          git config --global user.name "Discourse CI"
+          git config --global user.email "jack20220723@gmail.com"
+          git config --global user.name "QubitPi"
 
       - name: Start redis
         run: |
@@ -330,10 +331,7 @@ jobs:
   core_frontend_tests:
     if: github.event_name == 'pull_request' || github.repository != 'discourse/discourse-private-mirror'
     name: core frontend (${{ matrix.browser }})
-    runs-on: ubuntu-20.04-8core
-    container:
-      image: discourse/discourse_test:slim-browsers
-      options: --user discourse
+    runs-on: ubuntu-latest
 
     timeout-minutes: 35
 
@@ -353,8 +351,8 @@ jobs:
 
       - name: Setup Git
         run: |
-          git config --global user.email "ci@ci.invalid"
-          git config --global user.name "Discourse CI"
+          git config --global user.email "jack20220723@gmail.com"
+          git config --global user.name "QubitPi"
 
       - name: Get yarn cache directory
         id: yarn-cache-dir
