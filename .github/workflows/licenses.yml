@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+      - master
 
 concurrency:
   group: licenses-${{ format('{0}-{1}', github.head_ref || github.run_number, github.job) }}
@@ -28,8 +29,8 @@ jobs:
 
       - name: Setup Git
         run: |
-          git config --global user.email "ci@ci.invalid"
-          git config --global user.name "Discourse CI"
+          git config --global user.email "jack20220723@gmail.com"
+          git config --global user.name "QubitPi"
 
       - name: Bundler cache
         uses: actions/cache@v4

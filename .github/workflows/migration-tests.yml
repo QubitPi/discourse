@@ -7,6 +7,7 @@ on:
   push:
     branches:
       - main
+      - master
       - stable
     paths:
       - "migrations/**"
@@ -46,8 +47,8 @@ jobs:
 
       - name: Setup Git
         run: |
-          git config --global user.email "ci@ci.invalid"
-          git config --global user.name "Discourse CI"
+          git config --global user.email "jack20220723@gmail.com"
+          git config --global user.name "QubitPi"
 
       - name: Start redis
         run: |

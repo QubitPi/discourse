@@ -2,6 +2,8 @@
   <img src="images/discourse-readme-logo.png" width="300px">
 </a>
 
+[![Node Version][node version badge]][install node]
+
 Discourse is the online home for your community. We offer a 100% open source community platform to those who want complete control over how and where their site is run.
 
 Our platform has been battle-tested for over a decade and continues to evolve to meet users’ needs for a powerful community platform. Discourse allows you to create discussion topics and connect using real-time chat, as well as access an ever-growing number of official and community themes. In addition, we offer a wide variety of plugins for features ranging from chatbots powered by [Discourse AI](https://meta.discourse.org/t/discourse-ai/259214) to functionalities like SQL analysis using the [Data Explorer](https://meta.discourse.org/t/discourse-data-explorer/32566) plugin.
@@ -24,7 +26,7 @@ Browse [lots more notable Discourse instances](https://www.discourse.org/custome
 
 To get your environment set up, follow the community setup guide for your operating system.
 
-1. If you're on macOS, try the [macOS development guide](https://meta.discourse.org/t/beginners-guide-to-install-discourse-on-macos-for-development/15772).
+1. If you're on macOS, try the [macOS development guide](./docs/DEVELOPMENT-OSX-NATIVE.md).
 1. If you're on Ubuntu, try the [Ubuntu development guide](https://meta.discourse.org/t/beginners-guide-to-install-discourse-on-ubuntu-for-development/14727).
 1. If you're on Windows, try the [Windows 10 development guide](https://meta.discourse.org/t/beginners-guide-to-install-discourse-on-windows-10-for-development/75149).
 1. If you're looking to use a simpler Docker-based install, try the [Docker development guide](https://meta.discourse.org/t/install-discourse-for-development-using-docker/102009).
@@ -115,3 +117,8 @@ To guide our ongoing effort to build accessible software we follow the [W3C’s 
 ## Dedication
 
 Discourse is built with [love, Internet style.](https://www.youtube.com/watch?v=Xe1TZaElTAs)
+
+
+[install node]: https://deb.nodesource.com/
+
+[node version badge]: https://img.shields.io/badge/NODE-21-339933?logo=Node.js&logoColor=white&labelColor=66cc33&style=for-the-badge
